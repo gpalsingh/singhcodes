@@ -1,6 +1,6 @@
 Understanding recursion visually with fractals
 
-    Recursion is one of the little difficult type of concept that computer students have to face. Simply making a fibonacci sequence doesn't really guarantee complete understanding. Usually one has to get some experience before getting a good feel of the concept. But there's an easier way. If you could see what happens under the hood you could get a better understanding more quickly. Fractals are perfect for this purpose besides being beautiful to look at. 
+    Recursion is one of the more difficult type of concept that begginer computer programmers have to face. Simply making a fibonacci sequence doesn't really guarantee complete understanding. Usually one has to get some experience before getting a good feel of the concept. But there's an easier way. If you could see what happens under the hood you could get a better understanding more quickly. I found that fractals are perfect for this purpose beside being beautiful to look at. 
     Fractal is basically a reccuring pattern. If you zoom into an ideal fractal, you couldn't tell how much we have zoomed in. One famous example of the mendelbrot set is shown below.
     
     """IMAGE[ MANDELBROT SET ]"""
