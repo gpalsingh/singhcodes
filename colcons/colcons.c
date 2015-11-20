@@ -46,6 +46,36 @@ void putString( char* st ){
     }
 }
 
+char* intToString( int a ){
+    static char t[20], sign=' ';
+    int i, j;
+    
+    if(a < 0){
+        sign = '-';
+        a *= -1;
+    }
+    
+    for(i=19; (i>=0) && (a>0); i--, a/=10){
+        t[i] = '0'+ (a%10);
+    }   
+    
+    if(sign=='-'){
+        t[0] = sign;
+        j = 1;
+    }else{
+        j = 0;
+    }
+    
+    i++;
+    
+    for(; (i<20) && (j<20); i++, j++){
+        t[j] = t[i];
+    }
+    t[j] = '\0';
+    
+    return t;
+}
+
 void colprintf(char *fmt, ...){
     va_list li;
     int i, dcolor;
@@ -78,8 +108,7 @@ void colprintf(char *fmt, ...){
                 break;
                 
             case 'd':   //integer
-                sprintf(temp, "%d", va_arg(li, int));
-                putString( temp );
+                putString( intToString(va_arg(li, int)) );
                 break;
                 
             case 'f':   //float, similar to above
