@@ -50,15 +50,18 @@ char* intToString( int a ){
     static char t[20], sign=' ';
     int i, j;
     
+    //save sign
     if(a < 0){
         sign = '-';
         a *= -1;
     }
     
+    //store in reverse order
     for(i=19; (i>=0) && (a>0); i--, a/=10){
         t[i] = '0'+ (a%10);
     }   
     
+    //put sign
     if(sign=='-'){
         t[0] = sign;
         j = 1;
@@ -66,13 +69,16 @@ char* intToString( int a ){
         j = 0;
     }
     
+    //put number in front
     i++;
     
     for(; (i<20) && (j<20); i++, j++){
         t[j] = t[i];
     }
+    //make a valid string
     t[j] = '\0';
     
+    //done :)
     return t;
 }
 
