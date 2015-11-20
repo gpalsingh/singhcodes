@@ -1,4 +1,0 @@
-Coloured printing in C
-======================
-
-

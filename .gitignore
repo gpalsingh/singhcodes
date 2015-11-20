@@ -1,3 +1,4 @@
 *~
 clean.sh
 *.pyc
+test*
